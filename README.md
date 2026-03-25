@@ -1,2 +1,2 @@
 # PythonHPCMiniProject
-02613 Python &amp; high-performance computing course miniproject
+02613 Python &amp; High-Performance Computing course miniproject
