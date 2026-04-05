@@ -71,10 +71,8 @@ if __name__ == '__main__':
     ABS_TOL = 1e-4
 
     all_u = np.empty_like(all_u0)
-    chunksize = (N + num_workers - 1) // num_workers  # ceil division to determine chunk size
-    print(f"{num_workers}, {chunksize}", flush=True)
     with Pool(processes=num_workers) as pool:
-        results = pool.starmap(jacobi, [(u0, interior_mask, MAX_ITER, ABS_TOL) for u0, interior_mask in zip(all_u0, all_interior_mask)], chunksize=chunksize)
+        results = pool.starmap(jacobi, [(u0, interior_mask, MAX_ITER, ABS_TOL) for u0, interior_mask in zip(all_u0, all_interior_mask)])
     all_u = np.array(results)
 
     # Print summary statistics in CSV format

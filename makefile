@@ -4,3 +4,7 @@ env_init:
 
 ex%: ex%.py
 	python $<
+
+task%: task%.sh
+	chmod +x $<
+	./$<
