@@ -1,0 +1,75 @@
+No GPU on this node, CUDA module not loaded
+10000 {'mean_temp': 14.01233878811275, 'std_temp': 6.367431059312565, 'pct_above_18': 30.941014791508444, 'pct_below_15': 55.542295034537624}
+10009 {'mean_temp': 11.000135812436373, 'std_temp': 5.811144379826625, 'pct_above_18': 16.6712734948236, 'pct_below_15': 74.9723590310584}
+10014 {'mean_temp': 14.744169941950119, 'std_temp': 7.037733284673848, 'pct_above_18': 38.26367541377415, 'pct_below_15': 52.80837116508215}
+10019 {'mean_temp': 14.735524480624482, 'std_temp': 7.030325006703675, 'pct_above_18': 38.14915412864569, 'pct_below_15': 52.92926826787113}
+10029 {'mean_temp': 10.616037322820358, 'std_temp': 6.317331938274926, 'pct_above_18': 18.25563221896085, 'pct_below_15': 74.51301795448481}
+10031 {'mean_temp': 12.507072852890545, 'std_temp': 6.278432089100354, 'pct_above_18': 24.044722033998173, 'pct_below_15': 66.39513301711693}
+10051 {'mean_temp': 13.289039951277402, 'std_temp': 5.999085063388632, 'pct_above_18': 25.97693550756574, 'pct_below_15': 62.859923608050536}
+10053 {'mean_temp': 11.366493551285709, 'std_temp': 6.26121798185875, 'pct_above_18': 19.9510754583921, 'pct_below_15': 72.41052538787024}
+10056 {'mean_temp': 14.220114507861702, 'std_temp': 6.179461157398302, 'pct_above_18': 31.763454814173965, 'pct_below_15': 57.06174975667784}
+10064 {'mean_temp': 12.71696893739585, 'std_temp': 6.964227784263683, 'pct_above_18': 28.79137124461432, 'pct_below_15': 62.75688345539249}
+10075 {'mean_temp': 15.156939199079357, 'std_temp': 6.44052034037085, 'pct_above_18': 39.12088154756647, 'pct_below_15': 47.45605511880576}
+10079 {'mean_temp': 15.094353507626135, 'std_temp': 7.313911268349323, 'pct_above_18': 41.90001451870493, 'pct_below_15': 49.44974108309539}
+10080 {'mean_temp': 15.777740694240359, 'std_temp': 7.280585752157965, 'pct_above_18': 46.365765006711015, 'pct_below_15': 44.711034476002}
+10082 {'mean_temp': 16.465720758630678, 'std_temp': 6.713345052234242, 'pct_above_18': 48.64349722630506, 'pct_below_15': 40.56137689061685}
+10083 {'mean_temp': 15.639247995421403, 'std_temp': 7.120808056609733, 'pct_above_18': 44.855518923515284, 'pct_below_15': 45.886354482120744}
+10084 {'mean_temp': 15.100584697661853, 'std_temp': 7.1505418077486445, 'pct_above_18': 40.90648998644782, 'pct_below_15': 50.266526125583496}
+10085 {'mean_temp': 15.868862158668058, 'std_temp': 7.192791728448739, 'pct_above_18': 46.18303917834116, 'pct_below_15': 44.72566696293788}
+10086 {'mean_temp': 14.391525374209257, 'std_temp': 7.21561607319371, 'pct_above_18': 37.25664572257129, 'pct_below_15': 53.01884968583857}
+10087 {'mean_temp': 15.073205905031166, 'std_temp': 7.275519953981684, 'pct_above_18': 41.532405798190645, 'pct_below_15': 49.89713190601896}
+10089 {'mean_temp': 13.989763514400206, 'std_temp': 7.276278123379982, 'pct_above_18': 35.45861191757374, 'pct_below_15': 56.3640146392669}
+
+Processed 20 buildings
+Total time: 309.670 s
+Average time per building: 15.483 s
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 28150451: <wall_ref> in cluster <dcc> Done
+
+Job <wall_ref> was submitted from host <n-62-9-42> by user <s224538> in cluster <dcc> at Mon Apr  6 19:31:59 2026
+Job was executed on host(s) <n-62-31-22>, in queue <hpc>, as user <s224538> in cluster <dcc> at Mon Apr  6 19:32:01 2026
+</zhome/13/6/187329> was used as the home directory.
+</zhome/13/6/187329/courses/semester_2/02613_Python_and_Hig_Performance_Computing/Mini_Project_Wall_Heating> was used as the working directory.
+Started at Mon Apr  6 19:32:01 2026
+Terminated at Mon Apr  6 19:37:12 2026
+Results reported at Mon Apr  6 19:37:12 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q hpc
+#BSUB -J wall_ref
+#BSUB -n 1
+#BSUB -W 00:30
+#BSUB -R "rusage[mem=2048MB]"
+
+source /dtu/projects/02613_2025/conda/conda_init.sh
+conda activate 02613
+
+cd ~/courses/semester_2/02613_Python_and_Hig_Performance_Computing/Mini_Project_Wall_Heating/src
+
+python time_reference.py 20
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   310.55 sec.
+    Max Memory :                                 45 MB
+    Average Memory :                             43.40 MB
+    Total Requested Memory :                     2048.00 MB
+    Delta Memory :                               2003.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   311 sec.
+    Turnaround time :                            313 sec.
+
+The output (if any) is above this job summary.
+
